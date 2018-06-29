@@ -1,14 +1,20 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { LeafletModule } from '@asymmetrik/ngx-leaflet';
+import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
+import { EarthquakeMapComponent } from './earthquake-map/earthquake-map.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    EarthquakeMapComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    LeafletModule.forRoot(),
+    HttpModule
   ],
   providers: [],
   bootstrap: [AppComponent]
